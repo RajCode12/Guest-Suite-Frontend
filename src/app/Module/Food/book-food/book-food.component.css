@@ -1,0 +1,59 @@
+/* src/app/payment/payment.component.css */
+.order-summary {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .order-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-item p {
+    margin: 5px 0;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+}
+
+.order-button {
+  background-color: white;
+  color: blue;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.order-button:hover {
+  background-color: blue;
+  color: white;
+}

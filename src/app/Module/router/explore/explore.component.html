@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="sub-title">Book Now</h1>
+  <div class="services-list">
+    <a class="background background1" [routerLink]="['/room-home']" [class.disabled]="!isLoggedIn"
+    (click)="checkLogin($event)">
+      <i class="fa-solid fa-code"></i>
+      <h2>Room</h2>
+    </a>
+    <a class="background background2" [routerLink]="['/food-home']" [class.disabled]="!isLoggedIn"
+    (click)="checkLogin($event)">
+      <i class="fa-solid fa-code"></i>
+      <h2>Food</h2>
+    </a>
+  </div>
+</div>
+

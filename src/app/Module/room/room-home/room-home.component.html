@@ -1,0 +1,25 @@
+<div class="form-container">
+  <div class="input-group">
+    <label for="start-date">Start Date</label>
+    <input id="start-date" type="date" class="date-input" [(ngModel)]="roomBook.startDate" [min]="today" (change)="validateDates()">
+  </div>
+  <div class="input-group">
+    <label for="end-date">End Date</label>
+    <input id="end-date" type="date" class="date-input" [(ngModel)]="roomBook.endDate" [min]="roomBook.startDate" (change)="validateDates()">
+  </div>
+  <button type="button" (click)="searchRoom()" [disabled]="!datesValid">Search</button>
+</div>
+
+
+
+<div *ngIf="roomsDisplayed">
+  <div id="services" class="container">
+    <div class="services-list">
+      <a class="background" *ngFor="let category of roomCategories" (click)="selectRoom(category)" [routerLink]="['/book-room']">
+        <i class="fa-solid fa-code"></i>
+        <h2>{{category}}</h2>
+        <p></p>
+      </a>
+    </div>
+  </div>
+</div>

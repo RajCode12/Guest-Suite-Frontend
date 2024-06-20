@@ -1,0 +1,14 @@
+<div class="payment-container">
+    <div class="form-group">
+        <h1>Make Your Payment</h1>
+    <form [formGroup]="payForm" (ngSubmit)="onSubmit()">
+        <div class="input-container">
+            <h3>UPI ID  <input type="text" formControlName="upi"></h3>
+            
+        </div>
+        <p>Price : {{totalPrice}}</p>
+        <button class="button-container" (click)="onBack()">Cancel</button>
+        <button class="button-container2" type="submit" [disabled]="payForm.invalid">Pay</button>
+    </form>
+    </div>
+</div>

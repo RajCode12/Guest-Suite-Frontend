@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfe2e8;
+}
+
+.sidebar-navbar {
+    background-color: #f4f4f49e;
+    width: 200px; /* Set the width of the sidebar */
+    height: 80vh; /* Full-height to fit the whole page vertically */
+    position: fixed; /* Fixed position to stay in place on scroll */
+    left: 0;
+    top: 100;
+    z-index: 500;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar-navbar ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: start; /* Align items at the start of the sidebar */
+}
+
+.sidebar-navbar li {
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+.sidebar-navbar button.box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    width: 100%; /* Full width to fill the sidebar */
+    text-align: left; /* Align text to the left */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    outline:none;
+}
+
+.sidebar-navbar button.box:hover {
+    background-color: #0073e6;
+    color: #ffffff;
+}
+
+/* Adjusting the main content container if needed */
+.container {
+    margin-left: 200px; /* Push the content to the right */
+}

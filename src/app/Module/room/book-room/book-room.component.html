@@ -1,0 +1,34 @@
+<div class="passenger-details">
+    <div *ngFor="let c of customers; let i = index">
+        <h3>Customer Details: {{i+1}}</h3>    
+        <label>Customer Name</label>
+        <div><input type="text" [(ngModel)]="c.name" placeholder="Enter Your Name" class="input-field"></div>
+
+        <label>Age</label>
+        <div><input type="number" [(ngModel)]="c.age" placeholder="Enter Your Age" class="input-field"></div>
+
+        <label>Aadhar Number</label>
+        <div><input type="number" [(ngModel)]="c.aadharNo" placeholder="Enter Your Aadhar Number" class="input-field"></div>
+    </div>
+    <button class="button add-btn" (click)="addCount()">Add Customer</button>
+    <button class="button delete-btn" (click)="deleteCount()">Delete</button>
+</div>
+
+<div class="room-details-container">
+  <div class="room-details">
+    <img alt="{{ room.type }}" class="room-image">
+    <div class="room-info">
+      <h2>{{ room.type }}</h2>
+      <!-- <p>{{ room.description }}</p> -->
+      <p><strong>Start Date:</strong> {{ room.startDate | date }}</p>
+      <p><strong>End Date:</strong> {{ room.endDate | date }}</p>
+      <p><strong>Price:</strong>&#8377; {{ room.roomPrice }} per night</p>
+      <button class="btn-book" (click)="goToPayment()">Proceed to Payment</button>
+    </div>
+  </div>
+</div>
+
+<div class="action-buttons">
+  <button class="button back-btn" (click)="onBack()">Change Room</button>
+</div>
+  

@@ -1,0 +1,48 @@
+<div class="assist-page">
+    <div class="assist-form-container">
+      <h1 class="assist-header">How Can We Assist You?</h1>
+      <form [formGroup]="assistForm" (ngSubmit)="onSubmit()" class="assist-form">
+        <div class="form-group">
+          <label for="category">Select Category</label>
+          <select id="category" formControlName="category" class="form-control">
+            <option value="booking">Booking</option>
+            <option value="cancellation">Cancellation</option>
+            <option value="amenities">Amenities</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="sub-category">Select Sub-Category</label>
+          <select id="sub-category" formControlName="subCategory" class="form-control">
+            <option value="room">Room</option>
+            <option value="services">Services</option>
+            <option value="dining">Dining</option>
+            <option value="spa">Spa</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="query">Your Query</label>
+          <textarea id="query" formControlName="query" class="form-control" rows="4" placeholder="Write your query here..."></textarea>
+        </div>
+  
+        <div class="form-group">
+          <button type="submit" class="btn-submit" [disabled]="assistForm.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+</div>
+  
+    <div class="contact-us-container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feel free to reach out to us.</p>
+      <div class="contact-details">
+        <p><strong>Phone:</strong> +1 (999) 123-4567</p>
+        <p><strong>Email:</strong> contact&#64;myhotel.com</p>
+      </div>
+    </div>
+
+  

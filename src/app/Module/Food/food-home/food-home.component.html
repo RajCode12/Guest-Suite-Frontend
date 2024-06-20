@@ -1,0 +1,63 @@
+<div class="container mt-4">
+    <div class="container">
+      <h1 class="sub-title">Order Now</h1>
+      
+      <div class="food-category">
+        <h3 class="heading">Starters</h3>
+        <div class="food-list">
+          <div *ngFor="let s of starters" class="col-md-4">
+            <div class="card-body text-center">
+              <h5 class="title">{{s.name}}</h5>
+              <p class="price">&#8377; {{s.foodPrice}}</p>
+              <div class="controls">
+                <button class="btn btn-outline-secondary" (click)="decrement(s)">-</button>
+                <input type="text" class="count" [value]="startersCounts[s.name]" readonly>
+                <button class="btn btn-outline-secondary" (click)="increment(s)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="food-category">
+        <h3 class="heading">Main Course</h3>
+        <div class="food-list">
+          <div *ngFor="let m of mainFood" class="col-md-4">
+            <div class="card-body text-center">
+              <h5 class="title">{{m.name}}</h5>
+              <p class="price">&#8377; {{m.foodPrice}}</p>
+              <div class="controls">
+                <button class="btn btn-outline-secondary" (click)="decrement(m)">-</button>
+                <input type="text" class="count" [value]="mainFoodCounts[m.name]" readonly>
+                <button class="btn btn-outline-secondary" (click)="increment(m)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="food-category">
+        <h3 class="heading">Beverages</h3>
+        <div class="food-list">
+          <div *ngFor="let d of drinks" class="col-md-4">
+            <div class="card-body text-center">
+              <h5 class="title">{{d.name}}</h5>
+              <p class="price">&#8377; {{d.foodPrice}}</p>
+              <div class="controls">
+                <button class="btn btn-outline-secondary" (click)="decrement(d)">-</button>
+                <input type="text" class="count" [value]="drinksCounts[d.name]" readonly>
+                <button class="btn btn-outline-secondary" (click)="increment(d)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="order-section">
+    <div>Total Price: &#8377; {{ calculateTotalPrice() }}</div>
+    <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+  </div>
+  

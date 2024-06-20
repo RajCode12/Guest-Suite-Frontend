@@ -1,0 +1,44 @@
+<div class="form-container">
+    <div class="booking-form-container">
+        <h1 class="booking-header">Book Now</h1>
+        <form [formGroup]="cabForm" (ngSubmit)="onSubmit()" class="bus-form">
+      
+          <div class="form-group">
+            <label for="source">Source</label>
+            <select formControlName="source" id="source" class="form-control">
+              <option *ngFor="let source of sources" [value]="source">{{ source }}</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="dest">Destination</label>
+            <select formControlName="destination" id="dest" class="form-control">
+              <option *ngFor="let dest of destinations" [value]="dest">{{ dest }}</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" formControlName="date" class="form-control">
+          </div>
+      
+          <div class="form-group">
+            <button class="btn-continue" type="submit" [disabled]="cabForm.invalid">Search</button>
+          </div>
+      
+        </form>
+      </div>
+  </div>
+
+  
+<div *ngIf="showCabData" class="container">
+  <div class="cab-box" *ngFor="let cab of cabs">
+    <div class="cab-info">
+      <h2>{{ cab.carName }}</h2>
+      <p>Seater: {{ cab.seater }}</p>
+      <p>Amount: {{ cab.cabPrice }}</p>
+      <button class="book" (click)="bookCab(cab)">Book</button>
+    </div>
+    <div class="cab-image"></div>
+  </div>
+</div>

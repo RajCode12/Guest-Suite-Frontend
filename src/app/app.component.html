@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <ul>
+        <img src="assets/Images/logo1.webp" alt="Logo" class="navbar-logo">
+        <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="explore" routerLinkActive="active">Explore</a></li>
+        <li><a routerLink="product" routerLinkActive="active">Cabs</a></li>
+        <li><a routerLink="assist" routerLinkActive="active">Assist</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="login" routerLinkActive="active">Log In</a></li>
+        <li *ngIf="isLoggedIn">
+            <button class="profile" (click)="profileButton()">{{capital(user?.firstName)}}</button>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

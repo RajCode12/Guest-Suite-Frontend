@@ -1,0 +1,96 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .sub-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .food-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card-body {
+    width: 200px; /* Fixed width for each square box */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-body:hover {
+    border-color: #59eea8;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .price {
+    color: #888;
+    margin: 0 0 10px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 3px 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #59eea8;
+    background-color: #59eea8;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    color: #78e0a7;
+  }
+  
+  .count {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .order-section {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Background color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .order-section button {
+    margin-top: 10px;
+  }
+  
+  

@@ -1,0 +1,36 @@
+<!-- profile.component.html -->
+<div class="header">
+    <button class="btn back-btn" (click)="goBack()">Back</button>
+    <button class="btn logout-btn" (click)="logOut()">Log Out</button>
+  </div>
+  
+  <div class="container">
+    <div class="selection-container">
+      <label for="dataType">Select Data Type:</label>
+      <select id="dataType" [(ngModel)]="selectedType">
+        <option value="rooms">Rooms</option>
+        <option value="payments">Payments</option>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedType === 'rooms'" class="data-container">
+      <h2 class="section-header">Rooms</h2>
+      <div *ngFor="let room of rooms" class="card room-card">
+        <p><strong>Room Number:</strong> {{room.roomNumber}}</p>
+        <p><strong>Start Date:</strong> {{format(room.startDate)}}</p>
+        <p><strong>End Date:</strong> {{format(room.endDate)}}</p>
+        <p><button class="btn btn-details" (click)="roomDetails()">Booking Details</button></p>
+      </div>
+    </div>
+  
+    <div *ngIf="selectedType === 'payments'" class="data-container">
+      <h2 class="section-header">Payments</h2>
+      <div *ngFor="let pay of payments" class="card payment-card">
+        <p><strong>UPI ID:</strong> {{pay.upiId}}</p>
+        <p><strong>Amount:</strong> ₹{{pay.amount}}</p>
+        <p><strong>Date:</strong> {{format(pay.date)}}</p>
+      </div>
+    </div>
+  </div>
+  
+  
